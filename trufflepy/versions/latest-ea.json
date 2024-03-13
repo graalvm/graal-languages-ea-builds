@@ -1,0 +1,33 @@
+[
+    {
+        "version": "24.1.0-ea.03",
+        "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/trufflepy-24.1.0-ea.03/",
+        "files": [
+            {
+                "filename": "trufflepy-24.1.0-ea.03_linux-aarch64_bin.tar.gz",
+                "arch": "aarch64",
+                "platform": "linux"
+            },
+            {
+                "filename": "trufflepy-24.1.0-ea.03_linux-x64_bin.tar.gz",
+                "arch": "x64",
+                "platform": "linux"
+            },
+            {
+                "filename": "trufflepy-24.1.0-ea.03_windows-x64_bin.zip",
+                "arch": "x64",
+                "platform": "windows"
+            },
+            {
+                "filename": "trufflepy-24.1.0-ea.03_macos-aarch64_bin.tar.gz",
+                "arch": "aarch64",
+                "platform": "darwin"
+            },
+            {
+                "filename": "trufflepy-24.1.0-ea.03_macos-x64_bin.tar.gz",
+                "arch": "x64",
+                "platform": "darwin"
+            }
+        ]
+    }
+]
