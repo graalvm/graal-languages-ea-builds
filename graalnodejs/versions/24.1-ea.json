@@ -1,0 +1,69 @@
+[
+    {
+        "version": "24.1.0-ea.04",
+        "latest": true,
+        "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalnodejs-24.1.0-ea.04/",
+        "files": [
+            {
+                "filename": "graalnodejs-24.1.0-ea.04-linux-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "linux",
+                "variant": "native"
+            },
+            {
+                "filename": "graalnodejs-24.1.0-ea.04-linux-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "linux",
+                "variant": "native"
+            },
+            {
+                "filename": "graalnodejs-24.1.0-ea.04-macos-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "darwin",
+                "variant": "native"
+            },
+            {
+                "filename": "graalnodejs-24.1.0-ea.04-macos-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "darwin",
+                "variant": "native"
+            },
+            {
+                "filename": "graalnodejs-24.1.0-ea.04-windows-amd64.zip",
+                "arch": "x64",
+                "platform": "windows",
+                "variant": "native"
+            },
+            {
+                "filename": "graalnodejs-jvm-24.1.0-ea.04-linux-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "linux",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalnodejs-jvm-24.1.0-ea.04-linux-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "linux",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalnodejs-jvm-24.1.0-ea.04-macos-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "darwin",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalnodejs-jvm-24.1.0-ea.04-macos-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "darwin",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalnodejs-jvm-24.1.0-ea.04-windows-amd64.zip",
+                "arch": "x64",
+                "platform": "windows",
+                "variant": "jvm"
+            }
+        ]
+    }
+]
