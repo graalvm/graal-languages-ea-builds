@@ -8,4 +8,4 @@ Name         | Description
 [TruffleRuby](https://github.com/oracle/truffleruby) | Implementation of the Ruby language
 [Java on Truffle (Espresso)](https://github.com/oracle/graal/tree/master/espresso) | A meta-circular Java bytecode interpreter for the GraalVM
 [LLVM (Sulong)](https://github.com/oracle/graal/tree/master/sulong) | An engine for running LLVM bitcode on GraalVM
-[GraalWasm](https://github.com/oracle/graal/tree/master/wasm | GraalVM WebAssembly runtime (known as Wasm)
+[GraalWasm](https://github.com/oracle/graal/tree/master/wasm) | GraalVM WebAssembly runtime (known as Wasm)
