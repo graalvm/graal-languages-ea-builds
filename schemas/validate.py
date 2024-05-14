@@ -27,7 +27,7 @@ def validate(json_name, schema_name):
         builds = json_contents
         ensure_one_latest_build(json_name, builds)
     validate_builds(builds)
-    print(f'  ... passes sanity checks and all its URLs exist')
+    print('  ... passes sanity checks and all its URLs exist')
 
 
 def ensure_one_latest_build(json_name, builds):
@@ -67,11 +67,17 @@ if __name__ == '__main__':
     """
     for root, dirs, files in os.walk('.'):
         for file in files:
+            file_path = os.path.join(root, file)
             if file == GENERIC_EA_SCHEMA or file == LATEST_EA_SCHEMA :
                 continue
             if file.endswith('.json'):
-                file_path = os.path.join(root, file)
                 print(file_path)
                 schema_name = LATEST_EA_SCHEMA if file == LATEST_EA_JSON else GENERIC_EA_SCHEMA
                 validate(file_path, schema_name)
-    print('JSON validation successful')
+            if file.endswith('.url'):
+                with open(file_path) as f:
+                    print(f'Validating {file_path}...')
+                    url_contents = f.read() # use read as the file should only contain the url alone 
+                    check_url_exists(url_contents)
+                    print('  ... passes check for URL exist')
+    print('JSON & URLs validation successful')
