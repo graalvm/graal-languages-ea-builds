@@ -23,11 +23,25 @@ def validate(json_name, schema_name):
     print(f'  ... validates against {schema_name}')
     if schema_name == LATEST_EA_SCHEMA:
         builds = [json_contents]
+        ensure_consistent_latest_urls_files(json_name, json_contents)
     else:
         builds = json_contents
         ensure_one_latest_build(json_name, builds)
     validate_builds(builds)
     print('  ... passes sanity checks and all its URLs exist')
+
+
+def ensure_consistent_latest_urls_files(json_name, latest_build):
+    download_base_url = latest_build['download_base_url']
+    for file in latest_build['files']:
+        download_url = f'{download_base_url}{file["filename"]}'
+        url_arch = 'amd64' if file['arch'] == 'x64' else file['arch']
+        url_filename = f'latest-{file["variant"]}-{file["platform"]}-{url_arch}.url'
+        url_file_path = os.path.join(os.path.dirname(json_name), url_filename)
+        with open(url_file_path) as f:
+            url_contents = f.read() # use read as the file should only contain the url alone 
+            assert download_url == url_contents, f'Latest urls do not match:\n - {download_url} is in {json_name}\n - {url_contents} is in {url_filename}'
+    
 
 
 def ensure_one_latest_build(json_name, builds):
@@ -46,8 +60,8 @@ def validate_builds(builds):
 
 
 def check_urls_exist(download_base_url, files):
+    download_urls = [f'{download_base_url}{file["filename"]}{extension}' for extension in ['', '.sha256'] for file in files]
     with ThreadPool() as pool:
-        download_urls = [f'{download_base_url}{file["filename"]}{extension}' for extension in ['', '.sha256'] for file in files]
         pool.map(check_url_exists, download_urls)
 
 
