@@ -1,7 +1,74 @@
 [
     {
-        "version": "24.1.0-ea.08",
+        "version": "24.1.0-ea.09",
         "latest": true,
+        "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-24.1.0-ea.09/",
+        "files": [
+            {
+                "filename": "graalpy-24.1.0-ea.09-linux-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "linux",
+                "variant": "native"
+            },
+            {
+                "filename": "graalpy-24.1.0-ea.09-linux-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "linux",
+                "variant": "native"
+            },
+            {
+                "filename": "graalpy-24.1.0-ea.09-macos-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "darwin",
+                "variant": "native"
+            },
+            {
+                "filename": "graalpy-24.1.0-ea.09-macos-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "darwin",
+                "variant": "native"
+            },
+            {
+                "filename": "graalpy-24.1.0-ea.09-windows-amd64.zip",
+                "arch": "x64",
+                "platform": "windows",
+                "variant": "native"
+            },
+            {
+                "filename": "graalpy-jvm-24.1.0-ea.09-linux-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "linux",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalpy-jvm-24.1.0-ea.09-linux-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "linux",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalpy-jvm-24.1.0-ea.09-macos-aarch64.tar.gz",
+                "arch": "aarch64",
+                "platform": "darwin",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalpy-jvm-24.1.0-ea.09-macos-amd64.tar.gz",
+                "arch": "x64",
+                "platform": "darwin",
+                "variant": "jvm"
+            },
+            {
+                "filename": "graalpy-jvm-24.1.0-ea.09-windows-amd64.zip",
+                "arch": "x64",
+                "platform": "windows",
+                "variant": "jvm"
+            }
+        ]
+    },
+    {
+        "version": "24.1.0-ea.08",
+        "latest": false,
         "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-24.1.0-ea.08/",
         "files": [
             {
@@ -59,7 +126,7 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalpy-jvm-24.1.0-ea.08-widnows-amd64.tar.gz",
+                "filename": "graalpy-jvm-24.1.0-ea.08-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"
@@ -114,19 +181,13 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalpy-jvm-24.1.0-ea.07-macos-aarch64.tar.gz",
-                "arch": "aarch64",
-                "platform": "darwin",
-                "variant": "jvm"
-            },
-            {
                 "filename": "graalpy-jvm-24.1.0-ea.07-macos-amd64.tar.gz",
                 "arch": "x64",
                 "platform": "darwin",
                 "variant": "jvm"
             },
             {
-                "filename": "graalpy-jvm-24.1.0-ea.07-widnows-amd64.tar.gz",
+                "filename": "graalpy-jvm-24.1.0-ea.07-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"
@@ -193,7 +254,7 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalpy-jvm-24.1.0-ea.06-widnows-amd64.tar.gz",
+                "filename": "graalpy-jvm-24.1.0-ea.06-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"

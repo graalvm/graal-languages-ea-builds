@@ -1,6 +1,5 @@
 {
     "version": "24.1.0-ea.09",
-    "latest": true,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/llvm-24.1.0-ea.09/",
     "files": [
         {
@@ -58,7 +57,7 @@
             "variant": "jvm"
         },
         {
-            "filename": "llvm-jvm-24.1.0-ea.09-widnows-amd64.tar.gz",
+            "filename": "llvm-jvm-24.1.0-ea.09-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"

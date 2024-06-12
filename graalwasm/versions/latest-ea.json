@@ -1,6 +1,5 @@
 {
     "version": "24.1.0-ea.08",
-    "latest": true,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalwasm-24.1.0-ea.08/",
     "files": [
         {
@@ -58,7 +57,7 @@
             "variant": "jvm"
         },
         {
-            "filename": "graalwasm-jvm-24.1.0-ea.08-widnows-amd64.tar.gz",
+            "filename": "graalwasm-jvm-24.1.0-ea.08-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"

@@ -59,7 +59,7 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalwasm-jvm-24.1.0-ea.08-widnows-amd64.tar.gz",
+                "filename": "graalwasm-jvm-24.1.0-ea.08-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"
@@ -126,7 +126,7 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalwasm-jvm-24.1.0-ea.07-widnows-amd64.tar.gz",
+                "filename": "graalwasm-jvm-24.1.0-ea.07-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"
@@ -193,7 +193,7 @@
                 "variant": "jvm"
             },
             {
-                "filename": "graalwasm-jvm-24.1.0-ea.06-widnows-amd64.tar.gz",
+                "filename": "graalwasm-jvm-24.1.0-ea.06-windows-amd64.zip",
                 "arch": "x64",
                 "platform": "windows",
                 "variant": "jvm"
