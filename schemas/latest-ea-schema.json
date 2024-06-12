@@ -1,7 +1,7 @@
 {
     "$schema": "https://json-schema.org/draft/2019-09/schema",
     "$id": "https://github.com/graalvm/oracle-graalvm-ea-builds/blob/main/schemas/latest-ea-schema.json",
-    "title": "Schema for Latest Oracle GraalVM Early Access Build",
+    "title": "Schema for Latest Early Access Builds of Graal Languages",
     "type": "object",
     "required": [
         "version",
@@ -27,7 +27,8 @@
                 "required": [
                     "filename",
                     "arch",
-                    "platform"
+                    "platform",
+                    "variant"
                 ],
                 "additionalProperties": false,
                 "properties": {
