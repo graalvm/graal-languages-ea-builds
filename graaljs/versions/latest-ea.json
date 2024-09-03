@@ -1,63 +1,63 @@
 {
-    "version": "24.2.0-ea.10",
-    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graaljs-24.2.0-ea.10/",
+    "version": "24.2.0-ea.11",
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graaljs-24.2.0-ea.11/",
     "files": [
         {
-            "filename": "graaljs-24.2.0-ea.10-linux-aarch64.tar.gz",
+            "filename": "graaljs-24.2.0-ea.11-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graaljs-24.2.0-ea.10-linux-amd64.tar.gz",
+            "filename": "graaljs-24.2.0-ea.11-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graaljs-24.2.0-ea.10-macos-aarch64.tar.gz",
+            "filename": "graaljs-24.2.0-ea.11-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graaljs-24.2.0-ea.10-windows-amd64.zip",
+            "filename": "graaljs-24.2.0-ea.11-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "native"
         },
         {
-            "filename": "graaljs-24.2.0-ea.10-macos-amd64.tar.gz",
+            "filename": "graaljs-24.2.0-ea.11-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graaljs-jvm-24.2.0-ea.10-linux-aarch64.tar.gz",
+            "filename": "graaljs-jvm-24.2.0-ea.11-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graaljs-jvm-24.2.0-ea.10-linux-amd64.tar.gz",
+            "filename": "graaljs-jvm-24.2.0-ea.11-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graaljs-jvm-24.2.0-ea.10-macos-aarch64.tar.gz",
+            "filename": "graaljs-jvm-24.2.0-ea.11-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graaljs-jvm-24.2.0-ea.10-macos-amd64.tar.gz",
+            "filename": "graaljs-jvm-24.2.0-ea.11-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graaljs-jvm-24.2.0-ea.10-windows-amd64.zip",
+            "filename": "graaljs-jvm-24.2.0-ea.11-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"
