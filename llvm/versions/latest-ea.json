@@ -1,63 +1,63 @@
 {
-    "version": "24.2.0-ea.17",
-    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/llvm-24.2.0-ea.17/",
+    "version": "24.2.0-ea.18",
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/llvm-24.2.0-ea.18/",
     "files": [
         {
-            "filename": "llvm-24.2.0-ea.17-linux-aarch64.tar.gz",
+            "filename": "llvm-24.2.0-ea.18-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "llvm-24.2.0-ea.17-linux-amd64.tar.gz",
+            "filename": "llvm-24.2.0-ea.18-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "llvm-24.2.0-ea.17-macos-aarch64.tar.gz",
+            "filename": "llvm-24.2.0-ea.18-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "llvm-24.2.0-ea.17-macos-amd64.tar.gz",
+            "filename": "llvm-24.2.0-ea.18-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "llvm-24.2.0-ea.17-windows-amd64.zip",
+            "filename": "llvm-24.2.0-ea.18-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "native"
         },
         {
-            "filename": "llvm-jvm-24.2.0-ea.17-linux-aarch64.tar.gz",
+            "filename": "llvm-jvm-24.2.0-ea.18-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "llvm-jvm-24.2.0-ea.17-linux-amd64.tar.gz",
+            "filename": "llvm-jvm-24.2.0-ea.18-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "llvm-jvm-24.2.0-ea.17-macos-aarch64.tar.gz",
+            "filename": "llvm-jvm-24.2.0-ea.18-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "llvm-jvm-24.2.0-ea.17-macos-amd64.tar.gz",
+            "filename": "llvm-jvm-24.2.0-ea.18-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "llvm-jvm-24.2.0-ea.17-windows-amd64.zip",
+            "filename": "llvm-jvm-24.2.0-ea.18-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"
