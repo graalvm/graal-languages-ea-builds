@@ -1,5 +1,72 @@
 [
   {
+    "version": "24.2.0-ea.20",
+    "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/llvm-24.2.0-ea.20/",
+    "files": [
+      {
+        "filename": "llvm-24.2.0-ea.20-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "llvm-24.2.0-ea.20-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "llvm-24.2.0-ea.20-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "llvm-24.2.0-ea.20-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "llvm-24.2.0-ea.20-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "native"
+      },
+      {
+        "filename": "llvm-jvm-24.2.0-ea.20-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "llvm-jvm-24.2.0-ea.20-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "llvm-jvm-24.2.0-ea.20-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "llvm-jvm-24.2.0-ea.20-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "llvm-jvm-24.2.0-ea.20-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
     "version": "24.2.0-ea.19",
     "latest": true,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/llvm-24.2.0-ea.19/",
