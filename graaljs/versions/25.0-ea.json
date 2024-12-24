@@ -68,7 +68,7 @@
   },
   {
     "version": "25.0.0-ea.01",
-    "latest": true,
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graaljs-25.0.0-ea.01/",
     "files": [
       {
