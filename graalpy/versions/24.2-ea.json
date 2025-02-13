@@ -1,7 +1,74 @@
 [
   {
-    "version": "24.2.0-ea.31",
+    "version": "24.2.0-ea.32",
     "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-24.2.0-ea.32/",
+    "files": [
+      {
+        "filename": "graalpy-24.2.0-ea.32-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-24.2.0-ea.32-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-24.2.0-ea.32-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-24.2.0-ea.32-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-24.2.0-ea.32-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-jvm-24.2.0-ea.32-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-24.2.0-ea.32-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-24.2.0-ea.32-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-24.2.0-ea.32-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-24.2.0-ea.32-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
+    "version": "24.2.0-ea.31",
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-24.2.0-ea.31/",
     "files": [
       {
