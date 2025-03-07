@@ -1,7 +1,74 @@
 [
   {
-    "version": "25.0.0-ea.11",
+    "version": "25.0.0-ea.12",
     "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graaljs-25.0.0-ea.12/",
+    "files": [
+      {
+        "filename": "graaljs-25.0.0-ea.12-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graaljs-25.0.0-ea.12-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graaljs-25.0.0-ea.12-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graaljs-25.0.0-ea.12-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graaljs-25.0.0-ea.12-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "native"
+      },
+      {
+        "filename": "graaljs-jvm-25.0.0-ea.12-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graaljs-jvm-25.0.0-ea.12-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graaljs-jvm-25.0.0-ea.12-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graaljs-jvm-25.0.0-ea.12-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graaljs-jvm-25.0.0-ea.12-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
+    "version": "25.0.0-ea.11",
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graaljs-25.0.0-ea.11/",
     "files": [
       {
