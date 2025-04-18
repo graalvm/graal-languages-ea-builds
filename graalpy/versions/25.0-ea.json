@@ -1,7 +1,74 @@
 [
   {
-    "version": "25.0.0-ea.17",
+    "version": "25.0.0-ea.18",
     "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-25.0.0-ea.18/",
+    "files": [
+      {
+        "filename": "graalpy-25.0.0-ea.18-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-25.0.0-ea.18-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-25.0.0-ea.18-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-25.0.0-ea.18-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-25.0.0-ea.18-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "native"
+      },
+      {
+        "filename": "graalpy-jvm-25.0.0-ea.18-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-25.0.0-ea.18-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-25.0.0-ea.18-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-25.0.0-ea.18-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalpy-jvm-25.0.0-ea.18-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
+    "version": "25.0.0-ea.17",
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalpy-25.0.0-ea.17/",
     "files": [
       {
