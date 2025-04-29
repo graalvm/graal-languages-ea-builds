@@ -21,5 +21,8 @@ jobs:
       - name: Install jsonschema
         run: pip install jsonschema==4.6.1
 
+      - name: Install requests
+        run: pip install requests
+
       - name: Validate JSON files
         run: python schemas/validate.py

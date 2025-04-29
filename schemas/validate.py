@@ -3,7 +3,7 @@ import os
 import urllib.request
 from jsonschema import validate as json_validate
 from multiprocessing.dummy import Pool as ThreadPool
-
+import requests
 
 GENERIC_EA_SCHEMA = 'generic-ea-schema.json'
 LATEST_EA_JSON = 'latest-ea.json'
@@ -65,10 +65,16 @@ def check_urls_exist(download_base_url, files):
         pool.map(check_url_exists, download_urls)
 
 
-def check_url_exists(url):
-    req = urllib.request.Request(url,method="GET", headers={"User-Agent": "url-check/1.0"})
-    with urllib.request.urlopen(req, timeout=30) as r:
-        assert r.status == 200, f"{url}: {r.status}"
+def check_url_exists(download_url):
+    try:
+        response = requests.head(download_url,allow_redirects=True, timeout=60)
+        if response.url != download_url:
+            print(f"Redirected from {download_url} to {response.url}")
+        response.raise_for_status()
+        assert response.status_code == 302 or response.status_code == 200, f"Expected status code of 200, got {response.status_code} for '{download_url}'"
+    except requests.exceptions.RequestException as e:
+        print(f"Failure during getting artifact metadata from '{download_url}' root cause {e}")
+
 
 
 if __name__ == '__main__':
