@@ -4,7 +4,7 @@ import urllib.request
 from jsonschema import validate as json_validate
 from multiprocessing.dummy import Pool as ThreadPool
 import requests
-
+import sys
 GENERIC_EA_SCHEMA = 'generic-ea-schema.json'
 LATEST_EA_JSON = 'latest-ea.json'
 LATEST_EA_SCHEMA = 'latest-ea-schema.json'
@@ -70,8 +70,23 @@ def check_url_exists(download_url):
         response = requests.head(download_url,allow_redirects=True, timeout=60)
         if response.url != download_url:
             print(f"Redirected from {download_url} to {response.url}")
+
+
         response.raise_for_status()
-        assert response.status_code == 302 or response.status_code == 200, f"Expected status code of 200, got {response.status_code} for '{download_url}'"
+        if response.status_code == 302 or response.status_code == 200:
+            print(f"Got {response.status_code} for '{download_url}'")
+        elif response.status_code == 618:
+            print(f" Got {response.status_code} from '{download_url}'")
+            print(" fallback with get method insted of head")
+            try:
+                response2 = requests.get(download_url, allow_redirects=True, timeout=60)
+                response2.raise_for_status()
+            except requests.exceptions.RequestException as e:
+                print(f"Failure during getting artifact metadata from '{download_url}' root cause {e}")
+
+        else:
+            print(f" {response.status_code} for '{download_url}'")
+            sys.exit(1)
     except requests.exceptions.RequestException as e:
         print(f"Failure during getting artifact metadata from '{download_url}' root cause {e}")
 
