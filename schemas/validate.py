@@ -66,11 +66,9 @@ def check_urls_exist(download_base_url, files):
 
 
 def check_url_exists(url):
-    req = urllib.request.Request(url, method="GET",
-                                 headers={"Range":"bytes=0-0",
-                                          "User-Agent":"url-check/1.0"})
+    req = urllib.request.Request(url,method="GET", headers={"User-Agent": "url-check/1.0"})
     with urllib.request.urlopen(req, timeout=30) as r:
-        assert r.status in (200, 206), f"{url}: {r.status}"
+        assert r.status == 200, f"{url}: {r.status}"
 
 
 if __name__ == '__main__':
