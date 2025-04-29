@@ -41,7 +41,7 @@ def ensure_consistent_latest_urls_files(json_name, latest_build):
         with open(url_file_path) as f:
             url_contents = f.read() # use read as the file should only contain the url alone 
             assert download_url == url_contents, f'Latest urls do not match:\n - {download_url} is in {json_name}\n - {url_contents} is in {url_filename}'
-    
+            
 
 
 def ensure_one_latest_build(json_name, builds):
@@ -67,8 +67,27 @@ def check_urls_exist(download_base_url, files):
 
 def check_url_exists(download_url):
     request = urllib.request.Request(download_url, method='HEAD')
+    
+    if 'github.com' in download_url:
+        github_token = os.environ.get('GITHUB_TOKEN')
+        if github_token:
+            request.add_header('Authorization', f'token {github_token}')
+    
     try:
         response = urllib.request.urlopen(request)
+        
+        if response.status in (301, 302, 303, 307, 308) and 'github.com' in download_url:
+            redirect_url = response.headers.get('Location')
+            if redirect_url:
+                redirect_request = urllib.request.Request(redirect_url, method='HEAD')
+                if 'github.com' in redirect_url and os.environ.get('GITHUB_TOKEN'):
+                    redirect_request.add_header('Authorization', f'token {os.environ.get("GITHUB_TOKEN")}')
+                try:
+                    redirect_response = urllib.request.urlopen(redirect_request)
+                    assert redirect_response.status == 200, f"Redirect failed with status {redirect_response.status} for '{download_url}' -> '{redirect_url}'"
+                except urllib.error.URLError as e:
+                    assert False, f"Failed to follow redirect from '{download_url}' to '{redirect_url}': {e}"
+            return
     except urllib.error.URLError as e:
         assert False, f"Failed to retrieve '{download_url}': {e}"
     assert response.status == 200, f"Expected status code of 200, got {response.status} for '{download_url}'"
