@@ -67,9 +67,10 @@ def check_urls_exist(download_base_url, files):
 
 def check_url_exists(download_url):
     try:
-        response = requests.head(download_url)
+        response = requests.head(download_url,allow_redirects=True)
+        if response.url != download_url:
+            print(f"Redirected from {download_url} to {response.url}")
         response.raise_for_status()
-        print(response.status_code)
         assert response.status_code == 200, f"Expected status code of 200, got {response.status_code} for '{download_url}'"
     except requests.exceptions.RequestException as e:
         print(f"Failure during getting artifact metadata from '{download_url}' root cause {e}")
