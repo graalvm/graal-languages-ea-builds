@@ -1,11 +1,10 @@
 import json
 import os
-# import urllib.request
+import urllib.request
 from jsonschema import validate as json_validate
 from multiprocessing.dummy import Pool as ThreadPool
 import requests
-import sys 
-
+import sys
 GENERIC_EA_SCHEMA = 'generic-ea-schema.json'
 LATEST_EA_JSON = 'latest-ea.json'
 LATEST_EA_SCHEMA = 'latest-ea-schema.json'
@@ -71,6 +70,8 @@ def check_url_exists(download_url):
         response = requests.head(download_url,allow_redirects=True, timeout=60)
         if response.url != download_url:
             print(f"Redirected from {download_url} to {response.url}")
+
+
         response.raise_for_status()
         if response.status_code == 302 or response.status_code == 200:
             print(f"Got {response.status_code} for '{download_url}'")
