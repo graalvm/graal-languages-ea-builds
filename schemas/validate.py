@@ -67,7 +67,7 @@ def check_urls_exist(download_base_url, files):
 
 def check_url_exists(download_url):
     try:
-        response = requests.head(download_url,allow_redirects=True)
+        response = requests.head(download_url,allow_redirects=True, timeout=60)
         if response.url != download_url:
             print(f"Redirected from {download_url} to {response.url}")
         response.raise_for_status()
