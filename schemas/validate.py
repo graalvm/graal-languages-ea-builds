@@ -41,7 +41,6 @@ def ensure_consistent_latest_urls_files(json_name, latest_build):
         with open(url_file_path) as f:
             url_contents = f.read() # use read as the file should only contain the url alone 
             assert download_url == url_contents, f'Latest urls do not match:\n - {download_url} is in {json_name}\n - {url_contents} is in {url_filename}'
-            
 
 
 def ensure_one_latest_build(json_name, builds):
@@ -71,7 +70,7 @@ def check_url_exists(download_url):
     if 'github.com' in download_url:
         github_token = os.environ.get('GITHUB_TOKEN')
         if github_token:
-            request.add_header('Authorization', f'token {github_token}')
+            request.add_header('Authorization', f'Bearer {github_token}')
     
     try:
         response = urllib.request.urlopen(request)
@@ -81,7 +80,7 @@ def check_url_exists(download_url):
             if redirect_url:
                 redirect_request = urllib.request.Request(redirect_url, method='HEAD')
                 if 'github.com' in redirect_url and os.environ.get('GITHUB_TOKEN'):
-                    redirect_request.add_header('Authorization', f'token {os.environ.get("GITHUB_TOKEN")}')
+                    redirect_request.add_header('Authorization', f'Bearer {os.environ.get("GITHUB_TOKEN")}')
                 try:
                     redirect_response = urllib.request.urlopen(redirect_request)
                     assert redirect_response.status == 200, f"Redirect failed with status {redirect_response.status} for '{download_url}' -> '{redirect_url}'"
