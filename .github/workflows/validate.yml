@@ -11,9 +11,6 @@ jobs:
   build:
     name: Validate
     runs-on: ubuntu-latest
-    permissions:
-      checks: write
-      contents: read
     steps:
       - uses: actions/checkout@v4
 
@@ -22,3 +19,5 @@ jobs:
 
       - name: Validate JSON files
         run: python schemas/validate.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
