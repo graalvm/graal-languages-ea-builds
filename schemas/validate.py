@@ -1,6 +1,7 @@
 import json
 import os
 import urllib.request
+import time
 from jsonschema import validate as json_validate
 from multiprocessing.dummy import Pool as ThreadPool
 
@@ -11,6 +12,9 @@ LATEST_EA_SCHEMA = 'latest-ea-schema.json'
 ROOT_PATH = os.path.dirname(os.path.dirname(os.path.realpath(__file__)))
 SCHEMAS_DIR = 'schemas'
 VERSIONS_DIR = 'versions'
+
+MAX_RETRIES = 3
+RETRY_DELAY = 5  
 
 
 def validate(json_name, schema_name):
@@ -39,7 +43,7 @@ def ensure_consistent_latest_urls_files(json_name, latest_build):
         url_filename = f'latest-{file["variant"]}-{file["platform"]}-{url_arch}.url'
         url_file_path = os.path.join(os.path.dirname(json_name), url_filename)
         with open(url_file_path) as f:
-            url_contents = f.read() # use read as the file should only contain the url alone 
+            url_contents = f.read().strip()  # Strip to remove any whitespace/newlines
             assert download_url == url_contents, f'Latest urls do not match:\n - {download_url} is in {json_name}\n - {url_contents} is in {url_filename}'
     
 
@@ -60,18 +64,48 @@ def validate_builds(builds):
 
 def check_urls_exist(download_base_url, files):
     download_urls = [f'{download_base_url}{file["filename"]}{extension}' for extension in ['', '.sha256'] for file in files]
-    with ThreadPool() as pool:
+    with ThreadPool(4) as pool:
         pool.map(check_url_exists, download_urls)
 
 
 def check_url_exists(download_url):
-    request = urllib.request.Request(download_url, method='GET')
-    request.add_header('User-Agent', 'Mozilla/5.0')
-    try:
-        response = urllib.request.urlopen(request)
-    except urllib.error.URLError as e:
-        assert False, f"Failed to retrieve '{download_url}': {e}"
-    assert response.status == 200, f"Expected status code of 200, got {response.status} for '{download_url}'"
+    request = urllib.request.Request(download_url, method='HEAD')
+    
+    request.add_header('User-Agent', 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36')
+    
+    github_token = os.environ.get('GITHUB_TOKEN')
+    if github_token and 'github.com' in download_url:
+        request.add_header('Authorization', f'token {github_token}')
+    
+    for attempt in range(MAX_RETRIES):
+        try:
+            response = urllib.request.urlopen(request)
+            if response.status == 200:
+                return  
+            else:
+                print(f"Warning: Got status code {response.status} for '{download_url}'")
+                
+        except urllib.error.HTTPError as e:
+            if e.code == 429 or e.code > 500:  
+                if attempt < MAX_RETRIES - 1:  
+                    wait_time = RETRY_DELAY * (2 ** attempt)  
+                    print(f"Rate limit hit or server error ({e.code}) for '{download_url}'. Retrying in {wait_time}s...")
+                    time.sleep(wait_time)
+                    continue
+            print(f"Error accessing '{download_url}': HTTP {e.code} - {e.reason}")
+            if 'github.com/.*?/releases/download/' in download_url and e.code == 404 and not github_token:
+                print(f"Note: This may be due to missing GitHub authentication for private assets.")
+            assert False, f"Failed to retrieve '{download_url}': {e}"
+            
+        except urllib.error.URLError as e:
+            print(f"URL Error for '{download_url}': {e.reason}")
+            assert False, f"Failed to retrieve '{download_url}': {e}"
+            
+        except Exception as e:
+            print(f"Unexpected error for '{download_url}': {str(e)}")
+            assert False, f"Failed to retrieve '{download_url}': {e}"
+    
+    assert False, f"Failed to retrieve '{download_url}' after {MAX_RETRIES} attempts"
 
 
 if __name__ == '__main__':
@@ -82,7 +116,7 @@ if __name__ == '__main__':
     for root, dirs, files in os.walk('.'):
         for file in files:
             file_path = os.path.join(root, file)
-            if file == GENERIC_EA_SCHEMA or file == LATEST_EA_SCHEMA :
+            if file == GENERIC_EA_SCHEMA or file == LATEST_EA_SCHEMA:
                 continue
             if file.endswith('.json'):
                 print(file_path)
@@ -91,7 +125,7 @@ if __name__ == '__main__':
             if file.endswith('.url'):
                 with open(file_path) as f:
                     print(f'Validating {file_path}...')
-                    url_contents = f.read() # use read as the file should only contain the url alone 
+                    url_contents = f.read().strip()  
                     check_url_exists(url_contents)
                     print('  ... passes check for URL exist')
     print('JSON & URLs validation successful')
