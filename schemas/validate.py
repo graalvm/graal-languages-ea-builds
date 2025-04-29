@@ -65,13 +65,12 @@ def check_urls_exist(download_base_url, files):
 
 
 def check_url_exists(url, tries=3):
-    req = urllib.request.Request(url, method="GET",
-                                 headers={"Range": "bytes=0-0",
-                                          "User-Agent": "url-check/1.0"})
+    req = urllib.request.Request(url, method="HEAD",
+                                 headers={"User-Agent": "url-check/1.0"})
     for n in range(tries):
         try:
             with urllib.request.urlopen(req, timeout=30) as r:
-                if r.status in (200, 206):      
+                if r.status in (200, 302, 301):
                     return
                 raise AssertionError(f"Unexpected status {r.status} for {url}")
         except Exception as e:

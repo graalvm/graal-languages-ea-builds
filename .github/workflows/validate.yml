@@ -14,21 +14,12 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.13'
+
       - name: Install jsonschema
         run: pip install jsonschema==4.6.1
-
-      - run: |
-          python - <<'PY'
-          import sys, urllib.request, pprint
-          url = "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-25.0.0-ea.20/truffleruby-25.0.0-ea.20-linux-aarch64.tar.gz"
-          req = urllib.request.Request(url, method="HEAD")
-          try:
-              urllib.request.urlopen(req)
-          except urllib.error.HTTPError as e:
-              print("STATUS:", e.code, e.reason)
-              print("URL    :", e.geturl())
-              print("HEADERS:"); pprint.pprint(dict(e.headers))
-          PY
 
       - name: Validate JSON files
         run: python schemas/validate.py
