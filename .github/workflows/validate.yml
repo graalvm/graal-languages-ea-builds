@@ -19,3 +19,5 @@ jobs:
 
       - name: Validate JSON files
         run: python schemas/validate.py
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
