@@ -17,9 +17,6 @@ jobs:
       - name: Install jsonschema
         run: pip install jsonschema==4.6.1
 
-      - name: Validate JSON files
-        run: python schemas/validate.py
-
       - run: |
           python - <<'PY'
           import sys, urllib.request, pprint
@@ -32,3 +29,6 @@ jobs:
               print("URL    :", e.geturl())
               print("HEADERS:"); pprint.pprint(dict(e.headers))
           PY
+
+      - name: Validate JSON files
+        run: python schemas/validate.py
