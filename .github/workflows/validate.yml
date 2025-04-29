@@ -20,7 +20,7 @@ jobs:
       - run: |
           python - <<'PY'
           import sys, urllib.request, pprint
-          url = "https://github.com/graalvm/graal-languages-ea-builds/releases/graaljs-25.0.0-ea.19/graaljs-jvm-25.0.0-ea.19-macos-amd64.tar.gz"
+          url = "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-25.0.0-ea.20/truffleruby-25.0.0-ea.20-linux-aarch64.tar.gz"
           req = urllib.request.Request(url, method="HEAD")
           try:
               urllib.request.urlopen(req)
