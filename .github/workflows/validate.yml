@@ -19,3 +19,16 @@ jobs:
 
       - name: Validate JSON files
         run: python schemas/validate.py
+
+      - run: |
+          python - <<'PY'
+          import sys, urllib.request, pprint
+          url = "https://github.com/graalvm/graal-languages-ea-builds/releases/graaljs-25.0.0-ea.19/graaljs-jvm-25.0.0-ea.19-macos-amd64.tar.gz"
+          req = urllib.request.Request(url, method="HEAD")
+          try:
+              urllib.request.urlopen(req)
+          except urllib.error.HTTPError as e:
+              print("STATUS:", e.code, e.reason)
+              print("URL    :", e.geturl())
+              print("HEADERS:"); pprint.pprint(dict(e.headers))
+          PY
