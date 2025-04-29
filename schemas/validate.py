@@ -65,13 +65,12 @@ def check_urls_exist(download_base_url, files):
         pool.map(check_url_exists, download_urls)
 
 
-def check_url_exists(download_url):
-    request = urllib.request.Request(download_url, method='HEAD')
-    try:
-        response = urllib.request.urlopen(request)
-    except urllib.error.URLError as e:
-        assert False, f"Failed to retrieve '{download_url}': {e}"
-    assert response.status == 200, f"Expected status code of 200, got {response.status} for '{download_url}'"
+def check_url_exists(url):
+    req = urllib.request.Request(url, method="GET",
+                                 headers={"Range":"bytes=0-0",
+                                          "User-Agent":"url-check/1.0"})
+    with urllib.request.urlopen(req, timeout=30) as r:
+        assert r.status in (200, 206), f"{url}: {r.status}"
 
 
 if __name__ == '__main__':
