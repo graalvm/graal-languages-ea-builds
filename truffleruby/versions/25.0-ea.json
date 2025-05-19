@@ -1,7 +1,62 @@
 [
   {
-    "version": "25.0.0-ea.20",
+    "version": "25.0.0-ea.23",
     "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-25.0.0-ea.23/",
+    "files": [
+      {
+        "filename": "truffleruby-25.0.0-ea.23-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "truffleruby-25.0.0-ea.23-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "truffleruby-25.0.0-ea.23-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "truffleruby-25.0.0-ea.23-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "truffleruby-jvm-25.0.0-ea.23-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "truffleruby-jvm-25.0.0-ea.23-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "truffleruby-jvm-25.0.0-ea.23-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "truffleruby-jvm-25.0.0-ea.23-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
+    "version": "25.0.0-ea.20",
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-25.0.0-ea.20/",
     "files": [
       {
