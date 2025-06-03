@@ -1,63 +1,63 @@
 {
-    "version": "25.0.0-ea.24",
-    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalwasm-25.0.0-ea.24/",
+    "version": "25.0.0-ea.25",
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalwasm-25.0.0-ea.25/",
     "files": [
         {
-            "filename": "graalwasm-25.0.0-ea.24-linux-aarch64.tar.gz",
+            "filename": "graalwasm-25.0.0-ea.25-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graalwasm-25.0.0-ea.24-linux-amd64.tar.gz",
+            "filename": "graalwasm-25.0.0-ea.25-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graalwasm-25.0.0-ea.24-macos-aarch64.tar.gz",
+            "filename": "graalwasm-25.0.0-ea.25-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graalwasm-25.0.0-ea.24-macos-amd64.tar.gz",
+            "filename": "graalwasm-25.0.0-ea.25-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graalwasm-25.0.0-ea.24-windows-amd64.zip",
+            "filename": "graalwasm-25.0.0-ea.25-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "native"
         },
         {
-            "filename": "graalwasm-jvm-25.0.0-ea.24-linux-aarch64.tar.gz",
+            "filename": "graalwasm-jvm-25.0.0-ea.25-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graalwasm-jvm-25.0.0-ea.24-linux-amd64.tar.gz",
+            "filename": "graalwasm-jvm-25.0.0-ea.25-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graalwasm-jvm-25.0.0-ea.24-macos-aarch64.tar.gz",
+            "filename": "graalwasm-jvm-25.0.0-ea.25-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graalwasm-jvm-25.0.0-ea.24-macos-amd64.tar.gz",
+            "filename": "graalwasm-jvm-25.0.0-ea.25-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graalwasm-jvm-25.0.0-ea.24-windows-amd64.zip",
+            "filename": "graalwasm-jvm-25.0.0-ea.25-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"
