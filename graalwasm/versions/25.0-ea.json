@@ -1,7 +1,74 @@
 [
   {
-    "version": "25.0.0-ea.26",
+    "version": "25.0.0-ea.27",
     "latest": true,
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalwasm-25.0.0-ea.27/",
+    "files": [
+      {
+        "filename": "graalwasm-25.0.0-ea.27-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalwasm-25.0.0-ea.27-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "native"
+      },
+      {
+        "filename": "graalwasm-25.0.0-ea.27-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalwasm-25.0.0-ea.27-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "native"
+      },
+      {
+        "filename": "graalwasm-25.0.0-ea.27-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "native"
+      },
+      {
+        "filename": "graalwasm-jvm-25.0.0-ea.27-linux-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalwasm-jvm-25.0.0-ea.27-linux-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "linux",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalwasm-jvm-25.0.0-ea.27-macos-aarch64.tar.gz",
+        "arch": "aarch64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalwasm-jvm-25.0.0-ea.27-macos-amd64.tar.gz",
+        "arch": "x64",
+        "platform": "darwin",
+        "variant": "jvm"
+      },
+      {
+        "filename": "graalwasm-jvm-25.0.0-ea.27-windows-amd64.zip",
+        "arch": "x64",
+        "platform": "windows",
+        "variant": "jvm"
+      }
+    ]
+  },
+  {
+    "version": "25.0.0-ea.26",
+    "latest": false,
     "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalwasm-25.0.0-ea.26/",
     "files": [
       {
