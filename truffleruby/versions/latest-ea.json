@@ -1,51 +1,51 @@
 {
-  "version": "25.0.0-ea.27",
-  "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-25.0.0-ea.27/",
+  "version": "26.0.0-ea.01",
+  "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/truffleruby-26.0.0-ea.01/",
   "files": [
     {
-      "filename": "truffleruby-25.0.0-ea.27-linux-aarch64.tar.gz",
+      "filename": "truffleruby-26.0.0-ea.01-linux-aarch64.tar.gz",
       "arch": "aarch64",
       "platform": "linux",
       "variant": "native"
     },
     {
-      "filename": "truffleruby-25.0.0-ea.27-linux-amd64.tar.gz",
+      "filename": "truffleruby-26.0.0-ea.01-linux-amd64.tar.gz",
       "arch": "x64",
       "platform": "linux",
       "variant": "native"
     },
     {
-      "filename": "truffleruby-25.0.0-ea.27-macos-aarch64.tar.gz",
+      "filename": "truffleruby-26.0.0-ea.01-macos-aarch64.tar.gz",
       "arch": "aarch64",
       "platform": "darwin",
       "variant": "native"
     },
     {
-      "filename": "truffleruby-25.0.0-ea.27-macos-amd64.tar.gz",
+      "filename": "truffleruby-26.0.0-ea.01-macos-amd64.tar.gz",
       "arch": "x64",
       "platform": "darwin",
       "variant": "native"
     },
     {
-      "filename": "truffleruby-jvm-25.0.0-ea.27-linux-aarch64.tar.gz",
+      "filename": "truffleruby-jvm-26.0.0-ea.01-linux-aarch64.tar.gz",
       "arch": "aarch64",
       "platform": "linux",
       "variant": "jvm"
     },
     {
-      "filename": "truffleruby-jvm-25.0.0-ea.27-linux-amd64.tar.gz",
+      "filename": "truffleruby-jvm-26.0.0-ea.01-linux-amd64.tar.gz",
       "arch": "x64",
       "platform": "linux",
       "variant": "jvm"
     },
     {
-      "filename": "truffleruby-jvm-25.0.0-ea.27-macos-aarch64.tar.gz",
+      "filename": "truffleruby-jvm-26.0.0-ea.01-macos-aarch64.tar.gz",
       "arch": "aarch64",
       "platform": "darwin",
       "variant": "jvm"
     },
     {
-      "filename": "truffleruby-jvm-25.0.0-ea.27-macos-amd64.tar.gz",
+      "filename": "truffleruby-jvm-26.0.0-ea.01-macos-amd64.tar.gz",
       "arch": "x64",
       "platform": "darwin",
       "variant": "jvm"
