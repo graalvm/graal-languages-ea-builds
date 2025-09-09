@@ -1,63 +1,63 @@
 {
-    "version": "26.0.0-ea.12",
-    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalnodejs-26.0.0-ea.12/",
+    "version": "26.0.0-ea.13",
+    "download_base_url": "https://github.com/graalvm/graal-languages-ea-builds/releases/download/graalnodejs-26.0.0-ea.13/",
     "files": [
         {
-            "filename": "graalnodejs-26.0.0-ea.12-linux-aarch64.tar.gz",
+            "filename": "graalnodejs-26.0.0-ea.13-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graalnodejs-26.0.0-ea.12-linux-amd64.tar.gz",
+            "filename": "graalnodejs-26.0.0-ea.13-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "native"
         },
         {
-            "filename": "graalnodejs-26.0.0-ea.12-macos-aarch64.tar.gz",
+            "filename": "graalnodejs-26.0.0-ea.13-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graalnodejs-26.0.0-ea.12-macos-amd64.tar.gz",
+            "filename": "graalnodejs-26.0.0-ea.13-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "native"
         },
         {
-            "filename": "graalnodejs-26.0.0-ea.12-windows-amd64.zip",
+            "filename": "graalnodejs-26.0.0-ea.13-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "native"
         },
         {
-            "filename": "graalnodejs-jvm-26.0.0-ea.12-linux-aarch64.tar.gz",
+            "filename": "graalnodejs-jvm-26.0.0-ea.13-linux-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graalnodejs-jvm-26.0.0-ea.12-linux-amd64.tar.gz",
+            "filename": "graalnodejs-jvm-26.0.0-ea.13-linux-amd64.tar.gz",
             "arch": "x64",
             "platform": "linux",
             "variant": "jvm"
         },
         {
-            "filename": "graalnodejs-jvm-26.0.0-ea.12-macos-aarch64.tar.gz",
+            "filename": "graalnodejs-jvm-26.0.0-ea.13-macos-aarch64.tar.gz",
             "arch": "aarch64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graalnodejs-jvm-26.0.0-ea.12-macos-amd64.tar.gz",
+            "filename": "graalnodejs-jvm-26.0.0-ea.13-macos-amd64.tar.gz",
             "arch": "x64",
             "platform": "darwin",
             "variant": "jvm"
         },
         {
-            "filename": "graalnodejs-jvm-26.0.0-ea.12-windows-amd64.zip",
+            "filename": "graalnodejs-jvm-26.0.0-ea.13-windows-amd64.zip",
             "arch": "x64",
             "platform": "windows",
             "variant": "jvm"
